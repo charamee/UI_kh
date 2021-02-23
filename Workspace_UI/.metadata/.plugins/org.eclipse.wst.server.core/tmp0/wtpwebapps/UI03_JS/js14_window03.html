@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>중복체크</title>
+
+<script type="text/javascript">
+	var ids=["khacademy","java","script"];
+	
+	function confirmChk(){
+		var id=document.getElementsByName("id")[0].value; //입력한 값 받아서 id에 저장 
+		var div=document.getElementsByTagName("div")[0]; //div태그의[0]자리에서 받는다 
+		if(ids.indexOf(id)!=-1){ //-1이 아니라면 즉 존재한다면 
+			div.innerHTML="<b>아이디가 존재합니다.</b>";
+		}else{ //= -1 이라면 즉 존재하지 않는다면 
+			var userId="사용할 수 있는 아이디입니다."
+			          +"<input type='button' value='확인'"
+			          +"onclick='insertId(\""+id+"\")'>";
+			          //\" \" 는 진자 쌍따옴표를 쓰는것 쌍따옴표를 쓰지 않으면 값을 변수로 인식한다
+			          //insertId(qclass) 와 insertId("qclass")는 다르다 
+			          
+			div.innerHTML=userId;          
+		}
+	}
+	
+	function insertId(id){
+		opener.document.getElementsByName("id")[0].value=id;
+		opener.document.getElementsByName("pwd")[0].focus();//used to give focus to an element (if it can be focused).
+		//pwd로 넘어가는건가? 
+		close();
+	}
+</script>
+
+</head>
+<body>
+
+	<table>
+		<tr>
+			<td>아이디</td>
+			<td><input type="text" name="id"/></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="button" value="중복확인" onclick="confirmChk()"/>
+				<input type="button" value="취소" onclick="self.close()"/>
+			</td>
+		</tr>
+	</table>
+	<div></div>
+
+</body>
+</html>

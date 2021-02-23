@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	<h2>1.숫자형 형변환 number()</h2>
+	<p>문자형(정수형, 실수형)을 숫자형으로 반환</p> 
+	<input type="text" id="num">
+	<button onclick ="numTest(num.value)">클릭!</button>
+							<!-- 얘는 아규먼트 -->
+	
+	
+	
+	<script type="text/javascript">
+	
+		function numTest(val){ // 여기서 (val) 은 파라미터 val은 문자형이다. 
+			
+			var val = Number(val) +5; // Number 함수 : sTring 문자를 숫자로 바꿔주는 함수  
+			alert(val + ":"+typeof(val));
+		}
+	
+	
+	
+	
+	</script>
+	
+	<h2>2.정수형 형변환 parseInt()</h2>
+	<p>문자형을 정수형으로 반환 </p>
+	<input type="text" id="int">
+	<button onclick="intTest(int.value);">클릭!!</button>
+	
+	<script type="text/javascript">
+	
+		function intTest(val) {
+			var val = parseInt(val) + 5;
+			alert(val +":"+ typeof(val));
+			
+		}
+	
+	</script>
+	
+	<h2>3. 실수형 형변환 parseFloat()</h2>
+	<p>문자형을 실수형으로 반환</p>
+	<input type="text" id="float">
+	<button onclick="floatTest(float.value);">click</button>
+	
+	<script type="text/javascript">
+	
+		function floatTest(val){
+			var val = parseFloat(val) +5;
+			alert(val+":"+typeof(val));
+			
+		}
+	
+	</script>
+	
+	
+	<h4>4.검증함수</h4>
+	<p>문자열로 된 코드를 자바스크립트로 가져와서 실행 </p>
+	<input type="text" name= "evalue" placeholder="예) 5+10">
+	<button onclick="evalTest();">계산</button>
+	<span></span>
+	
+	<script type="text/javascript">
+	
+	
+		function evalTest(){
+			
+			var val=document.getElementsByName("evalue")[0];
+			if(confirm("작성하신 코드가 맞나요? : " +val.value)) {
+				document.getElementsByTagName("span")[0].innerHTML = "<b>계산결과 : "+eval(val.value)+"</b>";
+				//eval()함수는 뭐든 실행시켜준다
+				//문자 + 문자 : 오류난다 하지만 a=1;b=2;a+b; 문자를 변수로 만들어서 값을 넣어주고 실행하면 된다. 
+				
+			}else{
+				val.value ="다시 작성해 주세요";
+			}
+		}
+	
+	
+	</script>
+	
+	<hr>
+	<br>
+	<input type="number" class="calc"> <!-- id로도 똑같이 쓸수 있다 id = 1 -->
+	<input type="text" list="cal" class="calc"> <!-- id=2 -->
+	<datalist id="cal">
+		<option value="+">
+		<option value="-">
+		<option value="*">
+		<option value="/">
+	
+	</datalist>
+	<input type="number" class="calc"> <!-- id=3  -->
+	<button onclick="calc();">=</button>
+	<span></span>
+	
+	<script type="text/javascript"> 
+	//1. class를 걸어서 위에서 값 3개를 가져온다. 
+	
+	function calc(){
+		//id로 하게된다면 
+		//var res = ""; 
+		// var num 01 = document.getElementById("1").value;
+		//var operate = document.getElementById("2").value;
+		//var num 02 = document.getElementById("3").value;
+		
+		//res= num01 +operate+ num02;
+		//document.getElementByTagName("span")[1].innerHTML = eval(res);
+		
+		var docs =document.querySelectorAll(".calc");
+		var res= "";
+		
+		for(var i=0;i<docs.length;i++){
+			res += docs[i].value;
+		}
+		document.getElementsByTagName("span")[1].innerHTML = eval(res);
+	}
+	
+	
+	
+	
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	function qClass(){
+		//this : 외부에서 접근 가능
+		this.name="kh정보교육원";
+		//var : 외부에서 접근 불가 
+		var name02= "qclass";
+		this.getName02=function(){ //closure 함수
+				return name02;
+		}
+	}
+	//객체리터럴 : 객체가 값이된다 key: value 형태로 쓰인다
+	var myQclass={
+			name: "qclass",
+			print: function(){
+				alert(myQclass.name + "짱짱!!");
+			}
+	}
+	
+	//이미 qclass 라는 함수가 있는데 거기에 기능을 추가하고 싶을때  prototype을 사용한다. 즉 printName이 qClass()안에 있다고 생각하면 된다. 
+	qClass.prototype.printName=function(){
+		var res="최고!!!!!";
+		alert(this.name + " " +this.getName02() + res);
+		
+	}
+	
+	function objectTest(){
+		//객체 생성하기 
+		var cls = new qClass();
+		//alert(cls.name);
+		//alert(cls.name02);
+		//alert(cls.getName02());
+		
+		//alert(myQclass.name);
+		//myQclass.print();
+		cls.printName(); // qclass함수에 .prototype.printName해서 추가해줬기 때문에 사용할 수 있다.  
+		
+	}
+
+
+</script>
+
+
+</head>
+<body>
+
+
+	<pre>
+		객체의 구성
+		-메서드: 기능 정의 
+		-속성: 객체 내부 데이터 
+		-this: 객체 내부의 메서드나 속성을 정의할 때 사용 
+		-프로토타입 : 객체의 확장(이미 만들어진 객체에 기능을 추가한다) 
+	
+	</pre>
+	
+	<button onclick="objectTest();">클릭!</button>
+
+</body>
+</html>

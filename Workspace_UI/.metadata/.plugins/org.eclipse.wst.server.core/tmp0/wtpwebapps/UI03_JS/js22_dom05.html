@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+p{
+	border: 1px solid red;
+}
+
+
+</style>
+
+<script type="text/javascript">
+	var count=1;
+	function addAppend() {
+		var fieldset =document.getElementById("addele");
+		
+		var p = document.createElement("p");
+		p.textContent = "자식요소들 중 가장 마지막에 들어갑니다." +(count++);
+		
+		fieldset.appendChild(p);//appendChild: 원래 있던 자식 요소들 가장 아래에 생겨난다. 
+	}
+	
+	var cnt = 1;
+	function addBefore() {
+		
+		var p = document.createElement("p");
+		p.textContent = "선택된 엘리먼트의 앞에 붙여넣어요"+(cnt++);
+		
+		var div= document.querySelector("fieldset > div");
+		var fieldset = document.getElementById("addele");
+		
+		fieldset.insertBefore(p,div); // 뒤에 있는 div를 찾아서 p를 넣어주겠다는 뜻 
+	}
+	
+	function moveElement() {
+		var ele = document.querySelector("fieldset").children[1];//legend 태그부터 0번지 ~ 
+		var body = document.body; //바디에서 찾아서 appendChild를 하게되면  
+		body.appendChild(ele); //원래있던 자리에서 끄집어내서 body의 제일끝 (자식)으로 넣어준다. 
+		
+	}
+	var tmp=1;
+	function addTest(){
+		
+		//var par = document.getElementById("test01");
+		var div = document.createElement("div");
+		div.textContent ="dom test"+(tmp++);
+		
+		//par.appendChild(div);
+		document.getElementById("test01").appendChild(div);
+		
+	}
+	
+	function moveTest() {
+		var div = document.querySelector("#test01").children[0];
+		var test02 = document.querySelector("#test02");
+		test02.appendChild(div);
+		
+	}
+
+</script>
+
+
+</head>
+<body>
+
+
+	<h1>태그 추가하기</h1>
+	
+	<button onclick="addAppend();">appendChild()</button>
+	<button onclick="addBefore();">insertBefore()</button>
+	<button onclick="moveElement();">appenChild를 이용한 엘리먼트 이동</button>
+	
+	<fieldset id="addele">
+		<legend>부모태그</legend>
+		<div>div태그</div>
+	</fieldset>
+	<hr>
+	
+	<h3>
+		문제1. test01 태그에 "dom test"라는 내용을 가진 div 생성하기
+	</h3>
+
+	<button onclick="addTest();">클릭</button>
+	<h3>
+		 문제2. test01태그 안에 생성된 div 태그들을 test02 태그 안으로 이동하기 
+	</h3>
+	<button onclick="moveTest();">클릭</button><br>
+	
+	*test01
+	<div id ="test01"></div>
+	*test02
+	<div id="test02"></div>
+	
+	
+	
+	
+	
+</body>
+<style>
+	#test01,#test02{
+	width: 300px;
+	height: 300px;
+	border: 1px dotted blue;
+	}
+</style>
+</html>

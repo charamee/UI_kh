@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	//전역 변수 : 공용으로 사용 (값 유지됨)
+	var variable01 = 10;
+	//var: 변수라는 의미다 
+	
+	function test01(){
+		variable01= variable01 +10;
+		document.getElementById("v01").innerHTML = "<b style='color:red; background: yellow;'>"+ variable01+ "</b>";
+		
+	}
+	
+	function test02(){
+		
+		//지역변수
+		var variable02 = variable01+ 100;
+		document.getElementById("v02").innerHTML = "<b>"+variable02 +"</b>";
+	}
+	
+	function test03(){
+		var variable03 = "문자";
+		alert(variable03 + " : " + typeof variable03);
+		
+		variable03 = true;
+		alert(variable03 + " : " + typeof variable03);
+		
+		variable03 = null;
+		alert(variable03 + " : " + typeof variable03);
+		
+		variable03 = [1,3,5,7,9];
+		alert(variable03 + " : " + typeof variable03);
+		
+		variable03 = function(){  // 함수안에 함수를 또 넣을 수 있다.그리고 다시 변수에 넣었다. java 에서는 불가능했었음. 
+			alert("타입변환");
+		}
+		alert(variable03 + " : " + typeof variable03);
+		
+		variable03(); //그리고 또 함수를 호출 할 수 있다. 
+	}
+
+
+</script>
+</head>
+<body>
+
+
+	<h1>변수의 사용</h1>
+	
+	<dl> <!-- definition list 정의 리스트 -->
+		<dt>변수 선언 규칙 </dt> <!-- definition term 정의할 용어의 제목 -->
+		<dd>1.대소문자 구분</dd> <!-- 자동 들여쓰기  -->
+		<dd>2.영문, $,_ 로 시작</dd>
+		<dd>3.영문, #,_, 숫자를 포함</dd>
+		<dd>4. 키워드나 예약어를 사용불가</dd>
+		
+		<dt>변수의 범위</dt>
+		<dd>1. 전역변수 : window 객체에 포함되는 변수로, 다른 함수들에서 공용으로 사용가능(갑이 유지됨)</dd>
+			<button onclick="test01();">확인</button>
+		<dd id="v01"></dd>
+		<dd>2.지역변수: 함수나 객체 내부에 선언되고, 실행이 종료되면 사라짐 </dd>
+			<button onclick="test02();">확인</button>
+		<dd id="v02"></dd>
+		
+		
+		<dt>변수의 선언과 저장 </dt>
+		<dd>1.var 키워드를 사용하여 변수를 선언 </dd>
+		<dd>2.변수의 타입은 저장되는 타입에 따라 결정 <!-- 타입 추론이라고 한다.  -->
+			<button onclick="test03();">확인</button>
+			</dd>
+		
+		<dt>타입의 종류</dt>
+		<dd>문자(string)</dd>
+		<dd>숫자 (number)</dd>
+		<dd>논리(boolean)</dd>
+		<dd>널(null)</dd>
+		<dd>객체(object)</dd>
+		<dd>함수()</dd> <!--const let-->
+
+		
+		
+	</dl>
+
+
+
+</body>
+</html>

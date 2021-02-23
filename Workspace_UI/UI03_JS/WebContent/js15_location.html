@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+
+	function locationTest(){
+		//location.reload();  //새로고침 
+		//location.href="http://www.naver.com";
+		//location.assign("http://www.naver.com"); //href 와 같음 기능상 차이점 없음 
+		location.replace("http://www.naver.com"); //전 단계 이력 삭제 현재창을 대체한다 현재창에대한 기록 사라짐 
+		
+	}
+
+
+</script>
+
+
+</head>
+<body>
+
+	<a href="https://www.google.com/search?q=kh%EC%A0%95%EB%B3%B4%EA%B5%90%EC%9C%A1%EC%9B%90&oq=kh&aqs=chrome.3.69i59j69i60l2j69i59.2542j0j15&sourceid=chrome&ie=UTF-8">이동</a>
+	<button onclick="locationTest();">이동</button>
+
+
+
+
+</body>
+</html>

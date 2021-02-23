@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+	/*  
+		relative: 원래 위치 기준으로
+		absolute: 부모 위치 기준으로 부모가 꼭 relative여야 한다 
+		fixed: 브러우저에서의 위치 
+		
+	
+	
+	*/
+	
+	
+
+	#box{ /*부모*/
+		position: relative;
+		width: 550px;
+		border: 1px dotted red;
+	}
+	
+	p{
+		width: 130px;
+		height: 80px;
+		color: #fff;
+		font-weight: bold;
+	}
+	.myred{
+		background: red;
+		position: relative;
+	}
+	.myblue{
+		background: blue;
+		position: absolute; /*부모가 꼭 relative여야 한다 */
+		left: 100px;
+		top: 30px;
+		z-index: 2; /*입체라고 생각하면 된다. z는 화면기준으로 사람쪽으로 더 보여진다. 그래서 파란색이 맨위로 팝업되게된다. */
+	}
+	.mygreen{ 
+		background: green;
+		position: relative; /*위에 있던 파란색이 사라져서 파란색 자리로 간다 */
+		left: 30px;
+		top: -30px;
+	}
+	.myred:hover{
+		z-index: 5;
+	}
+	.myblue:hover {
+		z-index: 5;
+	}
+	
+	.mygreen:hover {
+		z-index: 5;
+	}
+	#fixed{
+		width: 100px;
+		height: 300px;
+		background: yellowgreen;
+		position: fixed;
+		right: 50px; /* 오른쪽을 기준으로 50만큼이다. 왼쪽은 정해주지 않아도 그냥 오른쪽기준 */
+		top: 100px;
+	}
+
+
+
+</style>
+</head>
+<body>
+
+	<div id="box">
+		<p class="myred">박스의 크기와 위치를 잘 살펴보아야 합니다.</p>
+		 <p class="myblue">박스의 포지션 속성을 바꿔가며 테스트 해 보아야 합니다.</p>
+		<p class="mygreen">포지션을 이해하기 위해서는 시험해보고 관찰해 보는 것이 절대적으로 필요합니다.</p>
+	</div>
+	
+	<div id="fixed">
+		Fixed!!!
+	
+	</div>
+	
+	<br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br>
+	
+
+</body>
+</html>

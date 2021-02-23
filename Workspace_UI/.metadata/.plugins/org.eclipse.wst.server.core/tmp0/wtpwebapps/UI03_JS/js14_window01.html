@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>윈도우 연습01</title>
+
+<style type="text/css">
+	#regist { /*회원가입 폼 css*/
+		border: 1px solid black;
+		background: pink;
+		position: absolute;
+		top: 200px;
+		left: 500px;
+		display: none; /*처음에 회원가입 폼은 안보이게 설정되어있다. */
+	}
+</style>
+
+<!-- 
+	display : none;			//공간을 차지하지 않는다 (애초에 만들어지지 않은 상태)
+	visibility: hidden;		//공간을 차지하고, 보이지 않는다 (만들어져 있는 상태)
+	
+ -->
+
+<script type="text/javascript">
+	function openWin() { //팝업창 창열기 
+		//경로,이름,옵션 
+		var url = "js14_window02.html";
+		var title = "myframe";  // 팝업창 나타날 위치 
+		//var title="";/title을 안넣으면 "";  팝업창이 새로 생김
+		var prop = "top=200px, left=600px, width=500px, height=500px";
+		window.open(url, title,prop); //prop을 지정해주지 않으면 새탭에서 열린다 
+	}
+
+	function registForm() { //회원가입 버튼 눌렀을때 
+		document.getElementById("regist").style.display = "block"; // 안만들어졌던 회원가입 폼 박스로 만들자 
+		//display: inline: 기본값, inline요소처럼 표시한다. 
+		//display: block: 요소를 block요소처럼 표시한다. (요소 앞뒤로 줄바꿈됨)
+		//display: none: 박스가 생성되지 않는다. 따라서 공간을 차지하지 않는다.  
+		
+		
+		document.body.style.background = "gray";
+
+		var btns = document.getElementsByName("btn");
+		for ( var i in btns) { //= for (var i=0; i<btns.length;i++) 와 같다 
+	//for in 반복문은 객체의 속성들을 반복하여 작업을 수행한다. 모든 객체에서 사용이 가능. 
+	
+			btns[i].disabled = "disabled"; 
+			//사용하고싶지 않은 태그가 있을경우  disabled 속성으로 사용을 못하게 한다. 
+		}
+	}
+
+	function closeWin() { //확인 버튼 눌렀을때 
+		document.getElementById("regist").style.display = "none"; //회원가입 폼 다시 none 
+		document.body.style.background = "white";
+
+		var btns = document.getElementsByName("btn");
+		for ( var i in btns) {
+			btns[i].disabled = ""; //disabled 속성 없애자 
+		}
+	}
+
+	function idchk() {  //id 인풋창 눌렀을때 무조건 중복체크 하자 
+		alert("중복체크를 확인하세요");
+	}
+
+	function idCheck() { //중복체크 버튼 눌렀을 때 
+		open("js14_window03.html", "", "width=300px,height=300px");
+	}
+</script>
+
+</head>
+<body>
+
+	<h1>window객체</h1>
+	
+	<pre>
+	프로퍼티
+	 -document
+	 -history
+	 -location
+	 -navigator
+	 -screen
+	 -frames
+	 -parent
+	 -top
+	 -self	 <!-- 현재창 반환 readonly이다  -->
+	메서드
+	 -alert()
+	 -confirm()
+	 -prompt()
+	 -back()
+	 -forward()
+	 -setInterval()
+	 -clearInterval()
+	 -setTimeout()
+	 -open()
+	 -close()
+	 -scroll(),scrollBy(), scrollTo() 
+	</pre>
+
+	<div id="f1">
+		<h1>팝업창 만들기</h1> <!-- 여기가 h1의[1] -->
+		<button onclick="openWin()" name="btn">창열기</button>
+		<hr>
+		<h1>회원가입하기(div팝업창)</h1>
+		<button onclick="registForm()" name="btn">회원가입</button>
+	</div>
+
+	<!-- 회원가입폼 시작 -->
+	<div id="regist">
+		<form>
+			<table>
+				<caption>회원가입</caption> 
+				<tr>
+					<td>아이디</td>
+					<td><input type="text" name="id" onclick="idchk()" readonly="readonly"/> 
+					<input type="button" value="중복체크" onclick="idCheck()" /></td>
+				</tr>
+				<tr>
+					<td>패스워드</td>
+					<td><input type="password" name="pwd" style="color: red;" /></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><input type="button" value="확인" onclick="closeWin()" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<!-- 회원가입폼 종료 -->
+
+	<br/><br/><br/>
+	<iframe name="myframe"></iframe> 
+	<!--An inline frame is used to embed another document 
+	within the current HTML document. 문서안에 작은 문서프레임을 만들어준다 --> 
+</body>
+</html>

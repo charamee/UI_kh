@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	function searchId(){
+		var doc= document.getElementById("test");
+	      //전체 문서 (객체화되어있는)
+	      //하나 가져왔기 때문에 Node : getElement (단수)
+	      doc.innerHTML ="id로 탐색합니다.";
+	      doc.style.color="red";
+	      // id는 유일한 하나이기 때문에 애초에 처음 찾은 첫번째 p태그만 반영된다. -> id중복 불가 
+				
+	}
+	function searchName(){
+		//NodeList = array
+		//name이라는 속성 여러개를 가져온다 : getElements(복수)
+		var doc= document.getElementsByName("test");
+		doc[1].value = "name 속성으로 엘리먼트 탐색했습니다.";
+	}
+	
+	function searchTagName(){
+		var doc= document.getElementsByTagName("p");
+		//console.log(typeof doc); // object로 나온다. 즉 document.어쩌고 ~ 하면 다 object  
+		doc[3].innerHTML="TagName으로 탐색됩니다.";
+		doc[3].style.color="yellowgreen";
+		
+		
+	}
+	function searchQS(){
+		var doc= document.querySelectorAll("#test"); //NodeList 아이디가 test인 것 전부 가져온다
+		//qeurySelector #test > id=test
+		
+		doc[0].innerHTML ="querySelectAll(css 표현식)";
+		var doc2= document.querySelector("#test"); //Node
+		//selector 는 하나만 가져온다 
+		doc2.style.backgroundColor="orange";
+		
+	}
+
+
+</script>
+
+</head>
+<body>
+
+
+<!-- Document Object Model -->
+<!-- 자바스크립트에서 문서를 가지고와서 객체로서 가지고 이것저것 하려고 ?  -->
+	<p onclick="searchQS();">DOM 탐색 메서드 </p>
+	
+	<p id="test" onclick="searchId();">1. 엘리먼트의  id로 탐색 id는 유일한 하나이다 : 엘리먼트 하나를 선택 (중복 불가) -> 반환값 : node(각각의 객체를 의미한다) 하나  </p>
+	
+	<p onclick="searchName();"> 2. 엘리먼트의 name으로 탐색: 엘리먼트 여러개를 선택 -> 반환값 : nodeList <br>
+		<input type="text" name="test" size="100%"> <br> 
+		<input type="text" name="test" size="100%"> <br> 
+		<input type="text" name="test" size="100%"> <br> 
+		
+		
+	</p>
+	<p id="test" onclick="searchTagName();">3. 엘리먼트의 태그이름으로 탐색: 엘리먼트 여러개를 선택 -> 반환값 : nodeList </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

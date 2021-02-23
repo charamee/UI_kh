@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="resources/js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            $("button:first").click(function(){
+                //target.replaceWith(newContent) : 문자열, 엘리먼트, 배열, 제이쿼리 펑션을 넣어줄수 있다. 바꿔치기해준다
+                $("p").replaceWith("<p><b>replaceWith</b></p>");
+               
+
+            });
+            $("button:last").click(function(){
+               //newcontent.replaceAll(target);
+                $("<p><b>replaceAll</b></p>").replaceAll("p");
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <p>DOM 대체</p>
+    </div>
+
+    <button>바꾸기(replaceWith</button>
+    <br>
+    <button>바꾸기(replaceAll)</button>
+
+
+    
+</body>
+</html>

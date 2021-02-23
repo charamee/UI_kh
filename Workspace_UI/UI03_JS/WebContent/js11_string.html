@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+
+	function strTest01(){
+		var str01 = "kh정보교육원";
+		var str02 = "Qclass";
+		
+		//+연산자
+		var str03 = str01+str02;
+		alert("str01 + str02 =" + str03);
+		
+		//concat()
+		var newString = str01.concat(str02, "대박","짱이야");
+		alert(newString);
+		
+		//join()
+		var joinTest = ["5","10","15","20"].join("+"); //join(원하는 문자) 와 배열을 더해서 하나의 문자열로 리턴해준다. 
+		alert(joinTest);
+		alert(eval(joinTest));
+		
+		
+	}
+	
+	function strTest02(){
+		var num =12.5;
+		var bool = true;
+		var result =  num + 1+ bool+"string";
+		alert(result + " : "+ typeof(result));
+		var result2 = "string" + num + 1+ bool;
+		alert(result2 + " : "+ typeof(result2));
+		
+	}
+	
+	function strTest03(){
+	
+		var str=prompt("이름을 입력하세요");
+		var span = document.getElementById("res");
+		
+		// ==: 같다. 동등연산자 
+		if(str =="qclass"){
+			span.textContent = str + "님, 환영합니다.";
+			
+		}else if(str == "큐클래스"){
+			
+			span.textContent = str+ "님, 환영합니다. ";
+		}else{
+			span.textContent = "이름을 확인해 주세요.";
+		}
+		
+		//자동 형 변환 
+		var num = 10;
+		if(num =="10"){ // java 에서는 둘은 숫자와 문자열로 false가 나오지만 js에서 자동으로 같은 타입으로 비교해준다 
+			alert("num == 10");
+			
+		}else {
+			alert("num != 10");
+		}
+		
+		// === : 엄격한 비교 
+		if(num === "10"){
+			alert("num===10");
+		}else{
+			alert("num!==10");
+		}
+		
+		var strVal = "화가난다";
+		var strObj = new String("화가난다");
+		
+		if(strVal == strObj){
+			alert(strVal + ":"+ typeof(strVal)+"\n" + strObj + typeof(strObj)+"같다");
+		}else{
+			alert("다르다");
+		}
+		
+		if(strVal === strObj){
+			alert(strVal + ":"+ typeof(strVal)+"\n" + strObj + typeof(strObj)+"\n 같다");
+		}else {
+			alert(strVal + ":"+ typeof(strVal)+"\n" + strObj + typeof(strObj)+"\n 다르다");
+		}
+	}
+
+	function strTest04(){
+		//indexOf : 왼쪽에서 오른쪽으로 검색 
+		//lastIndexOf : 오른쪽에서 왼쪽으로 검색하고 인덱스를 찾는다 (인덱스 번호는 왼쪽에서부터 0으로 시작한다. )
+		// 만인 검색하는 단어가 없으면 -1 리턴된다. 
+		var str = "코코 샤넬 가람 차차 코코 라미 "; //코부터 0~ 미까지 숫자로 반환된다. 
+		var prop = prompt ("검색할 이름을 작성해 주세요");
+		alert("indexOf: "+ str.indexOf(prop)); //앞에서부터 번지수 찾는다 
+		alert("lastIndexOf : "+ str.lastIndexOf(prop));//마지막 번지수를 찾는다 
+		
+		
+	
+	
+	}
+
+	function strTest05(){
+		var strVal = "문자열 추출하기. 관련 메소드:indexOf, substring.";
+		var start = strVal.indexOf(":");
+		var end = strVal.lastIndexOf(".");
+		var res = strVal.substring(start+1, end); // : 포함 하기 싫으니까 +1해서 i부터 출력하고 . 전까지 출력되니까 g로 끝난다. 
+		//substring(a,b) : a부터 b-1 까지 뽑는다. 
+		alert(res);
+		
+		//res = indexOf, substring
+		var splitVal = res.split(","); // res가 배열로 splitVal에 저장된다 그럼 0번지는 indexOf 1번지는 substirng
+		alert(splitVal[0]);
+		alert(splitVal[1]);
+	
+	
+	}
+
+	function strTest06(){
+		var prop = prompt("쉼표로 구분하여 키워드를 입력하세요","예)사과,바나나,키위,수박");
+		
+		var propArr = prop.split(",");
+		var propRes = "";
+		
+		for(var i = 0 ; i<propArr.length; i++){
+			propRes += propArr[i] +"<br>";
+		}
+		document.getElementById("key").innerHTML = propRes;
+		
+		
+	}
+
+
+
+
+</script>
+
+
+</head>
+<body>
+		
+	<p>문자열 합치기
+		<button onclick="strTest01();">클릭</button>
+	</p>
+	
+	<p>다른 자료형 합치기
+		<button onclick="strTest02();">클릭</button>
+	</p>
+	
+	<p>문자열 비교하기
+		<button onclick="strTest03();">클릭</button>
+		<span id="res"></span>
+	</p>
+	
+	<p>문자열 검색하기
+		<button onclick="strTest04();">클릭</button>
+	</p>
+	
+	<p>문자열 추출하기
+		<button onclick="strTest05();">클릭</button>
+	</p>
+	
+	<p>키워드 나누기 
+		<button onclick="strTest06();">클릭</button>
+	</p>
+	<div id="key"></div>
+		
+		
+		
+</body>
+</html>

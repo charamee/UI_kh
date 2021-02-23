@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+	a>img{width: 50px; height: 50px;}
+	#gallery{width: 200px; height: 200px;}
+	p{width: 350px;height: 250;}
+	img{vertical-align: middle;}
+	a{text-decoration: none;}
+	
+	
+</style>
+
+<script type="text/javascript">
+
+	var num=1;
+	
+	function prevGallery(){ //이전으로 넘어가는 함수 
+		num--;
+		if(num<1){
+			num=6;
+		}
+		
+		document.getElementById("gallery").src = "resources/image/"+num+".png";
+		//이벤트 전파 막기 
+		return false; //a태그에 네이버가 들어가있어서
+	}
+	
+	function nextGallery(){ // 다음으로 넘어가는 함수 
+		num++;
+		if(num>6){
+			num=1;
+		}
+		document.getElementById("gallery").src = "resources/image/"+num+".png";
+		return false;
+	}
+	
+
+</script>
+</head>
+<body>
+
+	<div id="galleryWrap">
+	
+    	<p>
+    		<a href="http://www.naver.com" onclick="return prevGallery();">
+    			<img alt="이전그림" src="resources/image/arrowleft.png">
+    		</a>
+    		
+    		<img id="gallery" alt="갤러리" src="resources/image/1.png">
+    		
+    		<a href="#next" onclick="nextGallery();">
+    			<img alt="다음그림" src="resources/image/arrowright.png">	
+    	
+    		</a>
+    		
+    	</p>
+	
+	</div>
+</body>
+</html>

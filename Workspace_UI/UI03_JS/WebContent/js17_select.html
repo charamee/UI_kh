@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	
+	//select  태그의 속성 :option, selectedIndex, selected
+	
+	
+	function show01() {
+		var food= document.getElementsByName("food")[0]; 
+		//selectedIndex: 선택한 option의 index 반환
+		var idx= food.selectedIndex; 
+		//options: select 태그가 가진 option 태그들 -> nodelist로 반환된다 
+		var foodName = food.options[idx].value;
+		alert(foodName + "야무지게 먹어야징!")
+	}
+
+	function show02() {
+		var res= "";
+		//1. select (name = food) 가져오자. 
+		var food = document.getElementsByName("food")[1]; // food는 단순히 html select Element로 node형태이다 
+		//alert(food + ":"+ typeof(food)); //[object HTMLSelectElement]:object 라고나온다 
+		alert(food.options +":"+ typeof(food.options)); //[object HTMLOptionsCollection]:object -> NodeList 이다 
+		//2. food가 가진 옵션들을 반복
+		for(i=0;i<food.options.length;i++){
+			//3. 옵션들 중 선택되어 있다면 , res += 옵션의 value
+			if(food.options[i].selected){ //선택되어 있는 값들의 
+				res +=food.options[i].value+", "; //value 값만 가져온다 
+			}
+		}
+		
+		//4.출력
+		alert(res + "먹고싶다....")
+		
+	}
+
+
+</script>
+</head>
+<body>
+
+	<h1>음식 선택하기</h1>
+	
+	<form>
+		<select name="food" onchange="show01();"> <!-- on~ 어쩌고는 event : change이벤트가 발생시 show01 호출 -->
+			<option>--선택--</option>
+			<option value="한우스테이크">한우스테이크</option>
+			<option value="물냉면">물냉면</option>
+			<option value="스시">스시</option>
+			<option value="샌드위치">샌드위치</option>
+			<option value="육회">육회</option>
+			
+		
+		</select>
+	<br><br><br><br><br><br><br><br><br>
+		<select name="food" multiple="multiple" size="5"><!-- size: 화면에 보여지는 갯수 -->
+			
+			<option value="한우스테이크">한우스테이크</option>
+			<option value="물냉면">물냉면</option>
+			<option value="스시">스시</option>
+			<option value="샌드위치">샌드위치</option>
+			<option value="육회">육회</option>
+			
+		
+		</select>
+		<input type="button" value="선택" onclick="show02();">
+	
+	</form>
+
+</body>
+</html>

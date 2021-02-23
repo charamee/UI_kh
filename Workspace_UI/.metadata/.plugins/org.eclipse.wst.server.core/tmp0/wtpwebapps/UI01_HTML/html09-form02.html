@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>select 요소</h1>
+	
+	<form action="#" method="get">
+		<fieldset>
+			<legend> 여러줄 글 상자와 목록상자</legend>
+			
+			<p>
+			 	<label for = "reply">답글</label><br>
+			 	<textarea rows="3" cols="30" id= "reply"></textarea>
+			 	
+			 </p>
+			 <p>
+			 	과목선택
+			 	<select name ="select01">
+				 	<option value="html">HTML</option>
+				 	<option value="css">CSS</option>
+				 	<option value="js">JavaScript</option>
+				 	<option value="jq">JQeury</option>
+				 
+			 	</select>
+			 	</p>
+			 	
+			 	<p>
+			 		점심메뉴
+			 		<select name="select02">
+			 			<optgroup label="한식"> <!-- 옵션 나눠줄때 사용, 선택은 불가  -->
+			 				<option value="kimchi-zzigae">김치찌개</option>
+			 				<option value="bulgogi">불고기</option>
+			 				<option value="d-z">된장찌개</option>
+			 				<option value="samketang">삼계탕</option>
+			 			</optgroup>
+			 			<optgroup label="분식">
+			 				<option value="jjolmean">쫄면</option>
+			 				<option value="dducbokki">떡볶이</option>
+			 				<option value="sun-dae">순대</option>
+			 			
+			 			</optgroup>
+			 		</select>	
+			 	
+			 	
+			 	</p>
+			 	<input type="submit" value="전송">
+			 	
+			 	<!-- select01=html& 전송하면 나오는것 selectname의 option value가 나온다. 
+			 	select02=kimchi-zzigae# -->
+			 	
+			 	
+			 	
+			 			
+		</fieldset>
+	
+	</form>
+	
+
+</body>
+</html>

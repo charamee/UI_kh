@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid red;
+
+        }
+        .prepend{
+            border: 1px dotted green;
+        }
+        .apped{
+            border: 1px dotted blue;
+        }
+    </style>
+    <script src="resources/js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            var cnt = 0 ; 
+            //$("seleector").prepend: 해당 셀럭터 자식요소중 맨앞에 
+            $("button:eq(0)").click(function(){
+                $("div").prepend($("<p>").addClass("prepend").text("prepend"+(cnt++)))      
+                 });
+            //$("seleector").append: 해당 셀럭터 자식요소중 맨뒤에     
+            $("button:eq(1)").click(function(){
+                $("div").append($("<p>").addClass("append").text("append"+(cnt++)))      
+
+            });
+            $("button:eq(2)").click(function(){
+                $("div").html("<b>html요소를 바꾼다.</b>");//innerHTML과 같다 
+            })
+            $("button:eq(3)").click(function(){
+                $("div").text("<b>text요소를 바꾼다.</b>"); //textContent와 같다 text 안에 있는내용을 just 문자로 받음 
+            })
+
+        })
+    </script>
+</head>
+<body>
+
+    <button>prepend</button>
+    <button>append</button>
+    <button>html</button>
+    <button>text</button>
+
+    <div>
+        <p>내부 삽입1</p>
+        <p>내부 삽입2</p>
+    </div>
+</body>
+</html>

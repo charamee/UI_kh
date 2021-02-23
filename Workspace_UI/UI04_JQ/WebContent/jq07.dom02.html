@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<script type="text/javascript" src="resources/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $("div").find("b").css({"font-size" : "30pt" ,"color" : "red"});
+        $("div").children("#chd").text("2.children()");
+        $("b").parent().css("background-color","hotpink"); //parent는 바로 위를 찾는다. 
+        $("p>b").parents().css("background-color","gray"); 
+        //b태그를 감싸고있는 모든 parent에 적용된다.  
+        $("p").eq(0).next().css({"font-size" : "50pt","color": "pink"}); //p(0)번지 다음이니까 (1)번지
+
+    })
+
+
+</script>
+
+
+</head>
+<body>
+    <pre>
+        <b>find("selector") : 선택한 엘리먼트와 자손들 중에 탐색하고자 하는 엘리먼트를 찾는다.</b>
+        <b>children("selector") : 선택한 엘리먼트의 자식요소들 중에 탐색하고자 하는 엘리먼트를 찾는다.</b>
+        <b>parent() / parents("selector") : 선택한 엘리먼트의 부모요소를 찾는다.</b>
+        <b>next("slelector") : 선택한 엘리먼트 다음에 따라오는 요소를 찾는다. </b>
+ 
+    </pre>
+    <div>
+        <p><b>1</b></p>
+        <p id="chd">2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+    </div>
+</body>
+</html>

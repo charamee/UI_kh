@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 150px;
+            height: 150px;
+            float: left;
+        }
+        #menubox{position: relative;}
+        #menu{overflow: auto;}
+        .sel{
+            width: 140px;
+            height: 140px;
+            border: 5px dotted red;
+            position: absolute;
+            left: 300px;
+
+        }
+        button{
+            width: 150px;
+            height: 50px;
+            margin-left: 300px;
+        }
+    </style>
+    <script src="resources/js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            setInterval(function(){//일정시간마다 반복 실행하는 함수 
+                var div = $("#menu");
+                $(".active").first().appendTo(div); //active 클래스의 첫번째를 찾아서 해당 div($#menu) 끝으로 이동  
+                                  //append 랑 같은데 타겟이 뒤에있다. 
+            }, 50);
+            $("button").click(function(){ 
+                $("img").toggleClass("active"); //버튼을 누르면 activeclass 생성
+                
+                if($("button").text() =="start"){ //start면 
+                    $("button").text("stop");
+                }else{
+                    $("button").text("start")
+                }
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>777</h1>
+    <div class="sel"></div>
+    <div id="menu">
+        <img src="resources/image/img01.png" alt="">
+        <img src="resources/image/img02.png" alt="">
+        <img src="resources/image/img03.png" alt="">
+        <img src="resources/image/img04.png" alt="">
+        <img src="resources/image/img05.png" alt="">
+    </div>
+
+    <button>start</button>
+</body>
+</html>

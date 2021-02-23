@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	function tableVal(){ //추가
+		var doc = document.forms[0];
+		var vals = [doc.id.value, doc.pw.value, doc.addr.value, doc.phone.value];
+		//forms[0] 입력된 4개의값을 vals에 넣는다
+		
+		//var check = 1; -> return으로 바꾸면 쉽게 된다 ㅎ ㅎ 
+		//유효값 처리 
+		for (var i = 0 ; i < vals.length; i++) {
+			if (vals[i] == null || vals[i] == "" || vals[i] == undefined) {
+				check = 0;
+				alert("모든 항목을 입력해 주세요"); //입력하지 않은 값이 있을때 
+				//함수 자체를 종료시킨다. 
+				return;
+				}
+			 
+			}
+			//if(check == 1){
+				document.getElementById("addtr").appendChild(createRow(vals));
+				// addtr의 자식자리 맨 끝에 값createRow(vals)넣기 
+				//document.getElementById("addtr").appendChild(tr값들) 아래에서 리턴된 tr 값이 들어간다 
+			}
+		
+		
+	
+	
+	function createRow(vals){ //data입력값 
+		var tr = document.createElement("tr"); //table row 생성
+		
+		for (var i = 0; i < vals.length; i++) {
+			var td = document.createElement("td"); //table data 생성
+			td.textContent = vals[i]; //vals에 저장된 값들이 td로 전달  
+			tr.appendChild(td); //tr의 자식자리에 td 
+		}
+		var dTd = document.createElement("td"); // 삭제table data 생성 
+		dTd.innerHTML = "<input type='button' value='삭제' onclick='delRow(this)'/>"; //삭제버튼 만들기
+		//<td><input type='button' value='삭제' onclick='delRow(this)'/></td>
+		
+		
+		tr.appendChild(dTd);
+		/*
+		<tr>
+			<td>doc.id.value</td>
+			<td>doc.pw.value</td>
+			<td>doc.addr.value</td>
+			<td>doc.phone.value</td>
+			<td><input type='button' value='삭제' onclick='delRow(this)'/></td>
+				
+		</tr>
+		
+		*/
+		
+		return tr;//마지막으로 tr변수에 담긴 5개의 값들을 리턴해서 createRow함수를 호출한 곳에 전달해준다.
+	}
+	
+	function deleteVal(){ //전체삭제
+		var tbody = document.getElementById("addtr"); //addtr 아이디를 가져와서 tbody 변수에 담는다 
+		while(tbody.hasChildNodes()){ //티바디안에 자식노드가 있다면 (없을때까지 반복한다)
+			tbody.removeChild(tbody.lastChild); //티바디안의 마지막 자식을 죽인다 
+		}
+	}
+	
+	function delRow(ele){  //delRow(ele) ele은 파라미터를 의미한다 (this)를 받는다 
+		//'delRow(this)' 는 나 자신 -> 삭제버튼을 의미한다. -> 
+		// 삭제버튼의 부모노드는 삭제 td 고 td의 부모는 tr 
+		
+		var delTr = ele.parentNode.parentNode; 
+		var tbody = document.getElementById("addtr");
+		tbody.removeChild(delTr);
+	}
+
+
+</script>
+
+</head>
+<body>
+
+	<form>
+		<table id="intable">
+			<tr>
+				<td>아이디</td>
+				<td><input type="text" name="id"></td>
+			</tr>
+			<tr>
+				<td>비밀번호</td>
+				<td><input type="text" name="pw"></td>
+			</tr>
+			<tr>
+				<td>주소</td>
+				<td><input type="text" name="addr"></td>
+			</tr>
+			<tr>
+				<td>전화번호</td>
+				<td><input type="text" name="phone"></td>
+			</tr>
+		</table>
+		<input type="button" value="추가" onclick="tableVal();"/>
+		<input type="button" value="전체삭제" onclick="deleteVal();"/>
+	</form>
+	<div id="addtable">
+		<table border="1" id="ctb">
+			<col width="100px" />
+			<col width="100px" />
+			<col width="300px" />
+			<col width="200px" />
+			<col width="100px" />
+			<thead>
+				<tr>
+					<th>아이디</th>
+					<th>비밀번호</th>
+					<th>주소</th>
+					<th>전화번호</th>
+					<th>삭제</th>
+				</tr>
+			</thead>
+			<tbody id="addtr"></tbody>
+		</table>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+

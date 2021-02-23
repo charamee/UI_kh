@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	//onload : 윈도우가 로드된 이후 
+	//window.onload=function(){}
+	onload=function(){
+		document.getElementsByTagName("button")[0].onclick = testDate01;
+		document.getElementsByTagName("button")[1].onclick = testDate02;
+		document.getElementsByTagName("button")[2].onclick = testDate03;
+		document.getElementsByTagName("button")[3].onclick = testDate04;
+		document.getElementsByTagName("button")[4].onclick = testDate05;
+	}
+	
+	function testDate01(){
+		var date = new Date();
+		
+		var inputDate= document.getElementById("today");
+		inputDate.innerHTML = date.toDateString() + "<br>";//Thu Jan 21 2021
+		inputDate.innerHTML += date.toLocaleDateString() +"<br>";//2021. 1. 21.
+		inputDate.innerHTML += date.toLocaleString() + "<br>";//2021. 1. 21. 오후 2:44:26
+		inputDate.innerHTML += date.toLocaleTimeString() + "<br>";//오후 2:44:26
+		
+		
+	
+	}
+	
+	function testDate02(){
+		//id가 today인 태그의 innerHTML에 
+		//2021/1/21/목요일 
+		
+		var today = new Date();
+		
+		var year = today.getFullYear();
+		var month = today.getMonth()+1;
+		var date = today.getDate();
+		var day = today.getDay();  
+		
+		// 요일을 만들자 Sunday is 0, Monday is 1, and so on.
+		var dayOfWeek = ["일요일","월요일","화요일","수요일","목요일","금요일","토요일"];
+		
+		document.getElementById("today").innerHTML = year +"/"+month+"/"+date+"/"+dayOfWeek[day];
+		
+		
+		
+	}
+	
+	function testDate03(){
+		//2020 11 20 
+		var year = 2020; 
+		var month =11;
+		var date = 20;
+		
+		var start = new Date(year,month-1,date);
+		document.getElementById("specific").innerHTML = start;
+	}
+	
+	function testDate04(){
+		var dates = document.getElementById("dates"); 
+		var inputDate = document.querySelector("#inputDate"); 
+		//var inputDateo = document.getElementByid("inputDate"); 위와 같은 결과 
+		
+		alert(dates +" : "+dates.value);
+		
+		var dDay = new Date(dates.value); //dates 노드의 값을 가져올거야- 가져온 날짜값을 가지고 날짜 객체를 만들었다. dDay에 그 값이 저장된다 
+		dDay.setDate(dDay.getDate() + parseInt(inputDate.value)); //inputDate.value 문자로 나오니까 -> 숫자로 바꿔준다
+		               //dday에 저장된 날짜를 뽑아온다 그리고 내가 입력해준 값을 더해준다 -> setDate 그 값을 더해서 setDate하면 자동으로 날짜로 계산해준다
+		document.getElementById("result").value = dDay.toLocaleDateString();
+		
+	}
+	function testDate05(){
+		
+		var start = document.getElementById("start").value;
+		var end  = document.getElementById("end").value;
+		
+		var startDate = new Date(start);
+		var endDate = new Date(end);
+		
+		var result = (endDate.getTime() - startDate.getTime()) /(1000 *60 * 60 *24); 
+		// ms 을 1000으로 나누면 초 다시 60으로 나누면 분 다시 60 으로 나누면 시간 다시 24로 나누면 일자가 나온다.  
+		
+		
+		document.getElementById("res").value = result;
+		
+	}
+
+
+
+
+</script>
+
+
+</head>
+<body>
+
+	<h1>오늘 날짜 출력하기</h1>
+	<span id="today"></span> <br>
+	<button>오늘날짜</button>
+	<button>날짜표현방식 합쳐서 해보기</button>
+	
+	<h1>특정 날짜 출력하기</h1>
+	<span id="specific"></span>
+	<br>
+	<button>특정날짜</button>
+	
+	<h1>경과 날짜 구하기</h1>
+	<label>지정날짜</label>
+	<input type="date" id="dates" size="50"> <br>
+	
+	<label>경과일</label>
+	<input type="number" id="inputDate"> <br>
+	
+	<label>경과 후 날짜</label>
+	<input type="text" id="result" readonly="readonly">
+
+	<button>경과날짜</button>
+	
+	<h1>D-Day</h1>
+	<label>시작 날짜</label>
+	<input type ="date" id="start" size="50"> <br>
+	<label>종료 날짜</label>
+	<input type ="date" id="end" size="50"> <br>
+	<label>남은 일수</label>
+	<input type ="text" id="res" readonly="readonly">
+	<button>남은 일수 구하기</button>
+	<!-- getTime() : milliseconds 반환 -->
+	
+	
+
+
+
+</body>
+</html>

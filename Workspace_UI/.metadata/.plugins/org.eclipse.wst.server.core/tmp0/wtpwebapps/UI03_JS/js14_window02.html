@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>팝업창</title>
+
+<script type="text/javascript">
+	function test(){
+		var val=document.getElementsByName("test")[0].value; //test에 입력한 값 받아서
+		opener.document.getElementsByTagName("h1")[1].innerHTML=val; //<h1>팝업창 만들기</h1> 여기로 전달 
+	   //opener : 나를 열어준 창을 찾는다 부모창 즉  window01을 찾아준다 
+		close();//	=self.close() 같은 뜻 // Closes the current window 현재 창 닫기 
+	}
+</script>
+
+</head>
+<body>
+
+	<input type="text" name="test"/>
+	<input type="button" onclick="test()" value="전달"/>
+	<input type="button" onclick="self.close()" value="창닫기"> <!-- self==this 나 객체 -->
+	
+	
+
+
+</body>
+</html>

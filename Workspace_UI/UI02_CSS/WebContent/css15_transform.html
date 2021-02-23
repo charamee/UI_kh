@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+
+	#tlate{
+		width: 100px;
+		height: 100px;
+		background: red;
+	
+		color: white;
+		font-size: 15pt;
+		word-wrap: break-word; /*글자 빠져나가는거 상자 안에 넣어주는것 */
+		transform: translate(30px,50px);
+	}
+	
+	#trotate{
+		width: 200px;
+		height: 200px;
+		background-color: red;
+		color: white;
+		font-size: 30pt;
+		word-wrap: break-word;
+		transform : rotate(30deg);
+		
+	
+	}
+	#tscale{
+		width: 200px;
+		height: 200px;
+		background-color: red;
+		color: white;
+		font-size : 30pt;
+		word-wrap: break-word;
+		transform : scale(0.6,0.6);
+	}
+	
+	#tskew{
+	
+		width: 200px;
+		height: 200px;
+		background-color: red;
+		color: white;
+		font-size: 30pt;
+		word-wrap: break-word;
+		transform: skew(20deg,20deg);
+	
+	}
+
+	#tran{
+		width: 200px;
+		height: 200px;
+		background-color: red;
+		color: white;
+		font-size: 30pt;
+		word-wrap: break-word;
+		transition: width 0.5s, background 1.5s linear, transform 1.5s; /*width는 0.5초 동안 바뀌고, 백그라운드 속성은 1.5초 linear하게 */
+		
+	}
+	#tran:hover{
+		width:800px;
+		background: pink;
+		transform : translate(300px,0px);
+	}
+	
+	li{
+		width: 500px;
+		background: lightgray;
+		margin-bottom: 3px;
+		font-size: 30pt;
+		font-weight: bold;
+		list-style-type: none;
+		transition : width 1s ,background 1s linear, color 1s , letter-spacing 1s;
+		cursor: pointer;
+
+	}
+	
+	li:hover{
+		width: 800px;
+		background : gray;
+		color: white;
+		letter-spacing: 10px;
+	
+	}
+	
+</style>
+
+
+
+
+</head>
+<body>
+
+	<h1>Transform-translate</h1>
+	<div id="tlate">translate(x,y) : 위치이동</div>
+	
+	<h1>Transform-rotate</h1>
+	<div id="trotate">rotate(deg): 회전</div>
+	
+	<h1>Transform-scale</h1>
+	<div id="tscale">scale(x,y) : 크기</div>
+	
+	<h1>Transform- skew</h1>
+	<div id="tskew">skey(deg,deg) : 변형</div>
+	
+	<h1>Transition</h1>
+	<div id="tran">transition: 속성전환</div>
+	
+	
+	<div>
+		<h1>Moving Menu</h1>
+		<ul>
+			<li>COMPANY</li>
+			<li>PRODUCT</li>
+			<li>SALES</li>
+			<li>COMMUNITY</li>
+			
+		
+		</ul>
+	
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+</body>
+</html>

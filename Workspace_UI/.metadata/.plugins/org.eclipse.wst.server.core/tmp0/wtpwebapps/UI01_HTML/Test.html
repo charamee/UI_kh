@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+input:hover{
+	background-color: orangered;
+	
+
+}
+textarea {
+	background-color: black;
+	color: white;
+}
+
+
+.ck:checked{
+	height: 20px;
+	width: 20px;
+}
+
+.end:hover{
+
+	background-color: yellowgreen;
+	
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+
+<form action="#" method="get">
+
+
+<h1>회원 가입</h1>
+
+<fieldset>
+	<legend>필수 입력 정보</legend>
+	<p>아이디 : <input type="text" name="id" maxlength="15" placeholder="아이디를 입력하세요" autofocus="autofocus"></p>
+	<p>비밀번호 : <input type="password" name="pw" maxlength="15" placeholder="비밀번호를 입력하세요"></p>
+	<p>비밀번호확인 : <input type="password" name="pw" maxlength="15" placeholder="비밀번호를 다시 입력하세요"></p>
+	<p>이름 : <input type="text" name="name" maxlength="5" placeholder="이름을 입력하세요"></p>
+	<p>이메일 : <input type="email" name="email" placeholder="이메일을 입력하세요"></p>
+	<p>휴대전화번호 : <input type="tel" name="phone"  placeholder="휴대폰 번호를 입력하세요"></p>
+	<p>홈페이지 : <input type="url" name="home"  value="http://" ></p>
+
+</fieldset>
+
+<fieldset>
+	<legend>추가 입력 정보</legend>
+	<p>국적 :
+		<select>
+			<option>한국</option>
+			<option>중국</option>		
+		</select> 
+	</p>
+	<p>생년월일 : <input type="date" name="birth" ></p>
+	<p>성별 : <input type="radio" class="ck" name="gender" value="M" checked="checked" >남자 
+			 <input type="radio" class="ck" name="gender" value="F">여자 </p>
+	<p>취미 : <input type="checkbox" class="ck" name="hobby" onclick="낚시" multiple="multiple" >낚시
+	 		<input type="checkbox" class="ck" name="hobby" onclick="게임" multiple="multiple" >게임
+		    <input type="checkbox" class="ck" name="hobby" onclick="요리" multiple="multiple" >요리 </p>
+	<p>
+	<label for="text">특이사항 : 
+		<textarea rows="5" cols="50" id="text"></textarea> </label>
+	</p>
+
+</fieldset>
+	<p> <input type="reset" class= "end" name="reset" value="취소하기">
+  		<input type="submit" class="end" name="submit" value="가입하기">
+  		<input type="hidden" name="hd" value="hidden value"> </p>
+
+</form>
+
+
+
+
+
+</body>
+</html>

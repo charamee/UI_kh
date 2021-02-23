@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>쿠팡이츠냠냠냠</title>
+<style type="text/css">
+	
+	*{
+		padding: 0px;
+		margin:0px;
+	}
+	
+	
+	div{
+		
+		margin:0px;
+		padding:0px;
+	}
+	#header{
+		padding-top: 30px;
+		color: white;
+		background-image:url("resources/image/img02.png") ;
+		background-repeat: no-repeat;
+		background-size: 1800px; 
+		font-size: 15pt;
+		position: relative;
+	
+	}
+	#ins{
+		position: absolute;
+		left: 320px;
+		top: 50px;
+	
+	}
+	
+	#body{
+		text-align:center;
+	}
+	
+	a:link{
+		color: white;
+		text-decoration: none;
+	}
+	a:visited{ 
+	color: white;
+	}
+	
+	#pg1{
+	  	text-align: center;  	
+	}
+	#pg2{
+		background: rgb(247,85,47);
+		background-image: url("resources/image/img04.gif");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 550px;
+		font-family: "Roboto";
+		font-weight: 700;
+		padding-top: 100px;
+	}
+	
+
+	#pg3{
+		background-color:#88cc2f;
+		background-image: url("resources/image/img07.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 550px;
+		font-weight: 500;
+		font-family: "Roboto";
+		padding-top: 100px;
+		padding-bottom: 500px;
+		
+	}
+
+	#pg4{
+		background-color: #31b4dd;
+		background-image: url("resources/image/img06.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 500px;
+		padding-bottom: 500px;
+		padding-top: 100px;
+		background-position: center bottom;
+		font-weight: 500;
+		font-family: "Roboto";
+	
+	}
+	
+	#pg5{
+		background-color: #e5f7fd;
+		background-image: url("resources/image/img08.gif");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 500px;
+		padding-bottom: 500px;
+		padding-top: 100px;
+		background-position: center bottom;
+		font-weight: 500;
+		font-family: "Roboto";
+		color: #31b4dd;
+	
+	}
+	
+	#pg6{
+		background-image: url("resources/image/img01.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 1730px;
+		padding-top: 250px;
+		padding-bottom: 100px;
+		font-weight: 500;
+		font-family: "Roboto";
+		color: white;
+		
+	
+	}
+
+	input{
+	
+		width: 350px;
+		height: 70px;
+		text-align: center;
+		font-size: 25pt;
+		font-weight: bold;
+		border-radius: 10px;
+		border: 5px solid #009ee9;
+	
+	}
+	
+	#footer{
+		color: gray;
+		font-weight: bold;
+		font-size: 11pt;
+		text-align: center;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		background-color: #f6f6f6;
+	}
+
+</style>
+</head>
+<body>
+
+ 	<div id="header">
+ 		<span style="margin-left: 200px;"><a href="#"><strong>KOR</strong></a></span>
+ 		<span>|</span>
+ 		<span><a href="#"><strong>ENG</strong></a></span>
+ 		
+ 		<span id="ins">
+ 			<a href="https://www.instagram.com/coupangeats/">
+				<img alt="인스타그램" src="resources/image/ig.png" width="35px" width="35px"> 		
+ 			</a>
+ 		
+ 			<a href="https://www.facebook.com/coupangeats">
+ 				<img alt="페이스북" src="resources/image/fb.png" width="35px" width="35px">
+ 			
+ 			</a>
+ 		</span>
+ 		<span style="margin-left: 600px;" id="store">
+ 			<a href="https://www.coupangeats.com/merchant?utm_source=eats_to_merchant">
+ 				<img alt="입점신청" src="resources/image/img12.png" width="150px" height="45px" >
+ 			</a>
+ 		</span>
+		<span style="margin-top:70px;">
+ 			<a href="https://store.coupangeats.com/">
+ 				<img alt="스토어" src="resources/image/img10.png" width="150px" height="40px">
+ 			</a>
+ 		</span>
+
+ 		<br>
+ 		<br>
+ 		<br>
+ 		
+ 		
+ 		<div id="pg1">
+ 			
+ 		
+ 			<p><img alt="쿠팡이츠" src="resources/image/img03.png" width="500" height="300"> </p>
+ 			<span style="font-size: 25pt;">
+ 			<br>
+ 			<p><b>첫 주문시 최대 1만원 할인!</b></p>
+ 			</span>
+ 			<br>
+ 			<p> 
+ 				<a href="https://play.google.com/store/apps/details?id=com.coupang.mobile.eats&referrer=airbridge%3Dtrue%26client_id%3Dc7cb5428-759a-4fe7-a00c-b6388adc64d5%26short_id%3D6hswm%26referrer_timestamp%3D1611760182182%26utm_source%3Dairbridge.websdk">
+ 				<img alt="앱다운로드" src="resources/image/img13.png" width="380"> 
+ 				</a>
+ 			</p><br>
+ 			<p><img alt="입점목록" src="resources/image/img11.png" width="1000"> </p><br>
+ 			<p><img alt="입점목록" src="resources/image/img09.png" width="40"> </p><br>
+	 			
+ 			
+ 		</div>
+ 		
+
+	<div id="body">
+	
+		<div id="pg2">
+		
+			<p style="font-size: 22pt;">
+				음식이 너무 뜨거워요!?</p><br>
+			<p style="font-size: 45pt;">
+				<em>식기전에 도착!</em><br>
+			<b><em>빠른 배달!</em></b></p>
+			
+			<br><br><br><br><br><br><br><br><br><br><br><br>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			
+		</div>
+		
+		<div id="pg3">
+		
+		<p style="font-size: 22pt;">
+		어디쯤 왔을까<br>
+		마음 졸이고 있나요?</p> <br>
+		<em style="font-size: 45pt; ">실시간 <br>
+		<b>배달위치 확인</b></em><br><br><br><br>
+		
+		
+		</div>
+		
+		<div id="pg4">
+
+		<p style="font-size: 22pt;">
+		번거롭게<br>
+		지갑을 찾고 계시나요?</p> <br><br><br>
+		<em style="font-size: 45pt; ">쿠페이 <br>
+		원터치 결제로<br>
+		<b style= "padding-bottom: 200px;">손쉽게 끝!</b></em><br><br><br>
+		
+		</div>
+		
+		
+		<div id="pg5">
+		
+		<p style="font-size: 22pt;">
+		<b>치킨,피자,떡볶이는 물론<br>
+		샐러드,디저트,커피 한 잔까지</b> </p> <br><br><br>
+		<em style="font-size: 45pt; ">어떤 음식도 <br>
+		<b style= "padding-bottom: 200px;">로켓배달!</b></em><br><br><br>
+		
+		</div>
+		<div id="pg6">
+		<p><b style="font-size: 47pt;">쿠팡이츠<br>
+		첫 주문 시 5000원 할인!</b> </p><br>
+		
+		<p style="color: #009ee9; font-size: 25pt; font-weight: bold;">쿠폰코드</p><br>
+		<p> <input type="text" name="coupon" value="1111EATS" readonly="readonly"></p><br><br>
+		
+		<p> 
+ 				<a href="https://play.google.com/store/apps/details?id=com.coupang.mobile.eats&referrer=airbridge%3Dtrue%26client_id%3Dc7cb5428-759a-4fe7-a00c-b6388adc64d5%26short_id%3D6hswm%26referrer_timestamp%3D1611760182182%26utm_source%3Dairbridge.websdk">
+ 				<img alt="앱다운로드" src="resources/image/img13.png" width="400"> 
+ 				</a>
+ 		</p><br>
+ 		
+ 		<p style="font-size: 12pt;line-height: 1.5;">
+ 		<b>*5천원 할인은 쿠팡이츠 앱에서 사용하실 수 있습니다. <br><br>
+ 		쿠팡이츠가 제공하는 프로모션은, <br>
+ 		사전공지 없이 내용이 변경되거나 <br>
+ 		기간이 조정될 수 있음을 안내드립니다.</b><br> 
+ 		</p>
+		
+		
+		</div>
+		
+		
+	</div>
+	
+	<div id="footer">
+		
+		<adress>서울시 송파구 송파대로 570</adress><br>
+		<adress>사업자 등록번호 : 120-88-00767</adress><br>
+		<adress>통신판매업신고 :2017-서울송파-0680</adress><br>
+		<adress>가입문의 1600-9876</adress><br>
+		<br>
+		<adress>All Rights Reserved &copy; 2020 Coupang Corp.</adress>
+	
+	</div>
+
+
+
+
+
+
+
+</body>
+</html>

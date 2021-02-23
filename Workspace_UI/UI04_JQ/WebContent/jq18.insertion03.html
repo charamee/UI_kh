@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{border: 1px solid  red;}
+    </style>
+    <script src="resources/js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            $("button:eq(0)").click(function(){
+                $("#base").after("<div>새로운 엘리먼트(after)</div>"); //타겟(타겟을 앞에 써준다) 뒤에 새로운 엘리먼트 생성 
+
+            });
+            $("button:eq(1)").click(function(){
+                $("<div>새로운 엘리먼트(insertAfter)</div>").insertAfter("#base");//타겟(타겟을 뒤에 써준다 ) 뒤에 새로운 엘리먼트 생성 
+            })
+            $("button:eq(2)").click(function(){
+                $("#base").before("<div>새로운 엘리먼트(before)</div>");//타겟 앞에 새로운 엘리먼트 생성
+            })
+            $("button:eq(3)").click(function(){
+                $("<div>새로운 엘리먼트(inserrtBefore)</div>").insertBefore("#base");//타겟 앞에 새로운 엘리먼트 생성
+            })
+        })
+    </script>
+</head>
+<body>
+
+        <button>after()</button>
+        <button>insertAfter()</button>
+        <button>before()</button>
+        <button>insertBefore()</button>
+
+        <div id="base">
+            <p>외부 삽입 메서드</p>
+        </div>
+
+
+
+
+
+
+
+    
+</body>
+</html>

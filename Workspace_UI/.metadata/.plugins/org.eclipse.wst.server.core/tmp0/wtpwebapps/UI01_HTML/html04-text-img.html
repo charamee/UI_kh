@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>TEST</h1>
+	<!-- web 접근성 (strong,em,... -->
+	<p>
+	
+		<b>진하게(&lt;b&gt;)</b><br>
+		<strong>진하게(&lt;strong&gt;)</strong><br> <!-- 둘다 진하게지만 strong 일 경우 시각장애인 음성?일시 더 강하게 발음해준다. -->
+		<i>기울임(&lt;i&gt;)</i><br>
+		<small>작은 텍스트 표시, 코멘트 (&ltl;small&gt;)</small><br>
+		윗<sub>첨자</sub>)(&ltl;sub&gt;)<br> 
+		<ins>내용 추가</ins>(&ltl;ins&gt;)<br>
+		<del>내용 삭제</del>(&ltl;del&gt;)<br>
+	
+		
+	</p>
+	
+	<hr>
+	<h1>IMG</h1>
+	<img alt = "img01 설명입니다." src="resources/img/img01.png" width="200px" height = "200px" title="img01.png임!!" >
+	<!-- src에 파일이 없다면 alt의 내용이 출력된다.  -->
+	<!-- px: 픽셀(해상도 별 상대크기) 
+		 pt: 포인트(1pt = 0.72인치)
+		 %,em : 지정/상속 등에 대한 백분율(상대크기) 
+     -->
+	<h3>이미지에 링크 걸기</h3>
+
+	<a href="index.html" title="index로 가자!"> <!-- href 는 링크 걸어주는 태그 -->
+		<img alt = "goindex" src="resources/img/img01.png" width = "100px" height="100px">
+	 </a>
+	 
+	 <h3>이미지 맵</h3>
+	 <img alt="my icon" src= "resources/img/img01.png" usemap="#my" width="100px" height="100px">
+	 
+	 <map name ="my">
+	 	<area alt = "go index" shape="rect" coords="25,25,75,75" href="index.html" title"인덱스 가자!!" >
+	 	<!-- area 여러개 잡으면 여러개 링크 잡을수 있다.  -->
+	 </map>
+	 	
+	 
+	 
+	 
+
+
+</body>
+</html>

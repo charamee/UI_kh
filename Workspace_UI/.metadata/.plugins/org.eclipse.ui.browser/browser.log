@@ -1,0 +1,65 @@
+
+1월 14, 2021 11:38:49.335 NEW SESSION
+1월 14, 2021 11:38:49.336 [11872:13336:0114/113849.334:ERROR:device_event_log_impl.cc(211)] [11:38:49.334] USB: usb_device_handle_win.cc:1020 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+1월 14, 2021 11:44:56.36 [14504:9724:0114/114456.036:ERROR:device_event_log_impl.cc(211)] [11:44:56.036] USB: usb_device_handle_win.cc:1020 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+1월 14, 2021 11:54:48.500 [0114/115448.499:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+1월 14, 2021 12:29:06.222 [12348:15052:0114/122906.222:ERROR:device_event_log_impl.cc(211)] [12:29:06.222] USB: usb_device_handle_win.cc:1020 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+1월 14, 2021 12:38:55.587 [0114/123855.586:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+
+1월 15, 2021 24:15:57.303 NEW SESSION
+1월 15, 2021 24:15:57.303 [4248:9744:0115/001557.301:ERROR:cache_util_win.cc(20)] Unable to move the cache: 액세스가 거부되었습니다. (0x5)
+1월 15, 2021 24:15:57.304 [4248:9744:0115/001557.301:ERROR:cache_util.cc(140)] Unable to move cache folder C:\Users\�씪誘�\AppData\Local\Google\Chrome\User Data\ShaderCache\GPUCache to C:\Users\�씪誘�\AppData\Local\Google\Chrome\User Data\ShaderCache\old_GPUCache_000
+1월 15, 2021 24:15:57.304 [4248:9744:0115/001557.301:ERROR:disk_cache.cc(184)] Unable to create cache
+1월 15, 2021 24:15:57.305 [4248:9744:0115/001557.301:ERROR:shader_disk_cache.cc(606)] Shader Cache Creation failed: -2
+1월 15, 2021 24:20:46.260 [4568:3716:0115/002046.259:ERROR:get_updates_processor.cc(256)] PostClientToServerMessage() failed during GetUpdates with error 2
+
+1월 15, 2021 09:15:26.334 NEW SESSION
+1월 15, 2021 09:15:26.335 [3820:7828:0115/091526.329:ERROR:device_event_log_impl.cc(211)] [09:15:26.329] USB: usb_device_handle_win.cc:1020 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+1월 15, 2021 09:25:12.967 [0115/092512.963:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+
+1월 18, 2021 09:16:30.342 NEW SESSION
+1월 18, 2021 09:16:30.343 [3816:4484:0118/091630.338:ERROR:device_event_log_impl.cc(211)] [09:16:30.338] USB: usb_device_handle_win.cc:1020 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+1월 18, 2021 09:26:19.805 [0118/092619.785:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+
+1월 22, 2021 24:39:37.386 NEW SESSION
+1월 22, 2021 24:39:37.386 [8188:3696:0122/003937.384:ERROR:device_event_log_impl.cc(211)] [00:39:37.384] USB: usb_device_handle_win.cc:1020 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+
+1월 22, 2021 09:25:26.958 NEW SESSION
+1월 22, 2021 09:25:26.958 [11480:12808:0122/092526.956:ERROR:device_event_log_impl.cc(211)] [09:25:26.957] USB: usb_device_handle_win.cc:1020 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+1월 22, 2021 09:35:19.412 [0122/093519.411:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+
+1월 22, 2021 15:22:24.263 NEW SESSION
+1월 22, 2021 15:22:24.263 [7928:8040:0122/152224.262:ERROR:device_event_log_impl.cc(211)] [15:22:24.261] USB: usb_device_handle_win.cc:1020 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+1월 22, 2021 15:32:12.576 [0122/153212.576:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+
+1월 24, 2021 21:42:56.197 NEW SESSION
+1월 24, 2021 21:42:56.197 [11472:2724:0124/214256.195:ERROR:device_event_log_impl.cc(211)] [21:42:56.195] USB: usb_device_handle_win.cc:1020 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+1월 24, 2021 21:52:49.589 [0124/215249.588:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+
+1월 26, 2021 09:23:05.882 NEW SESSION
+1월 26, 2021 09:23:05.882 [6740:14416:0126/092305.880:ERROR:device_event_log_impl.cc(211)] [09:23:05.879] USB: usb_device_handle_win.cc:1020 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+1월 26, 2021 09:32:54.248 [0126/093254.247:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+1월 26, 2021 09:47:31.644 [6080:15996:0126/094731.644:ERROR:device_event_log_impl.cc(211)] [09:47:31.643] USB: usb_device_handle_win.cc:1020 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+1월 26, 2021 09:57:28.17 [0126/095728.016:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+1월 26, 2021 13:33:31.972 [11364:8692:0126/133331.971:ERROR:device_event_log_impl.cc(211)] [13:33:31.972] USB: usb_device_handle_win.cc:1020 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+1월 26, 2021 13:43:22.70 [0126/134322.070:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+
+1월 27, 2021 09:06:33.273 NEW SESSION
+1월 27, 2021 09:06:33.273 [13256:14236:0127/090633.269:ERROR:device_event_log_impl.cc(211)] [09:06:33.269] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+1월 27, 2021 09:32:11.521 [3016:8256:0127/093211.521:ERROR:device_event_log_impl.cc(211)] [09:32:11.522] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+
+1월 28, 2021 09:05:28.599 NEW SESSION
+1월 28, 2021 09:05:28.600 [13088:1312:0128/090528.595:ERROR:device_event_log_impl.cc(211)] [09:05:28.595] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+1월 28, 2021 12:40:05.816 [13088:1312:0128/124005.814:ERROR:device_event_log_impl.cc(211)] [12:40:05.813] USB: usb_service_win.cc:258 Failed to get device driver name: 요소가 없습니다. (0x490)
+1월 28, 2021 14:47:52.214 [13088:8056:0128/144752.213:ERROR:database.cc(1707)] Passwords sqlite error 2067, errno 0: UNIQUE constraint failed: compromised_credentials.url, compromised_credentials.username, compromised_credentials.compromise_type, sql: INSERT INTO compromised_credentials (url, username, create_time, compromise_type) VALUES (?, ?, ?, ?)
+1월 28, 2021 14:47:52.215 [13088:8056:0128/144752.213:ERROR:database.cc(1707)] Passwords sqlite error 2067, errno 0: UNIQUE constraint failed: compromised_credentials.url, compromised_credentials.username, compromised_credentials.compromise_type, sql: INSERT INTO compromised_credentials (url, username, create_time, compromise_type) VALUES (?, ?, ?, ?)
+1월 28, 2021 14:47:52.215 [13088:8056:0128/144752.213:ERROR:database.cc(1707)] Passwords sqlite error 2067, errno 0: UNIQUE constraint failed: compromised_credentials.url, compromised_credentials.username, compromised_credentials.compromise_type, sql: INSERT INTO compromised_credentials (url, username, create_time, compromise_type) VALUES (?, ?, ?, ?)
+1월 28, 2021 14:47:52.216 [13088:8056:0128/144752.214:ERROR:database.cc(1707)] Passwords sqlite error 2067, errno 0: UNIQUE constraint failed: compromised_credentials.url, compromised_credentials.username, compromised_credentials.compromise_type, sql: INSERT INTO compromised_credentials (url, username, create_time, compromise_type) VALUES (?, ?, ?, ?)
+1월 28, 2021 14:47:52.216 [13088:8056:0128/144752.214:ERROR:database.cc(1707)] Passwords sqlite error 2067, errno 0: UNIQUE constraint failed: compromised_credentials.url, compromised_credentials.username, compromised_credentials.compromise_type, sql: INSERT INTO compromised_credentials (url, username, create_time, compromise_type) VALUES (?, ?, ?, ?)
+1월 28, 2021 14:47:52.216 [13088:8056:0128/144752.214:ERROR:database.cc(1707)] Passwords sqlite error 2067, errno 0: UNIQUE constraint failed: compromised_credentials.url, compromised_credentials.username, compromised_credentials.compromise_type, sql: INSERT INTO compromised_credentials (url, username, create_time, compromise_type) VALUES (?, ?, ?, ?)
+1월 28, 2021 14:47:52.216 [13088:8056:0128/144752.214:ERROR:database.cc(1707)] Passwords sqlite error 2067, errno 0: UNIQUE constraint failed: compromised_credentials.url, compromised_credentials.username, compromised_credentials.compromise_type, sql: INSERT INTO compromised_credentials (url, username, create_time, compromise_type) VALUES (?, ?, ?, ?)
+1월 28, 2021 14:47:52.216 [13088:8056:0128/144752.214:ERROR:database.cc(1707)] Passwords sqlite error 2067, errno 0: UNIQUE constraint failed: compromised_credentials.url, compromised_credentials.username, compromised_credentials.compromise_type, sql: INSERT INTO compromised_credentials (url, username, create_time, compromise_type) VALUES (?, ?, ?, ?)
+1월 28, 2021 14:47:52.217 [13088:8056:0128/144752.214:ERROR:database.cc(1707)] Passwords sqlite error 2067, errno 0: UNIQUE constraint failed: compromised_credentials.url, compromised_credentials.username, compromised_credentials.compromise_type, sql: INSERT INTO compromised_credentials (url, username, create_time, compromise_type) VALUES (?, ?, ?, ?)
+
+2월 02, 2021 23:58:51.343 NEW SESSION
+2월 02, 2021 23:58:51.343 [15872:11424:0202/235851.339:ERROR:device_event_log_impl.cc(211)] [23:58:51.339] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)

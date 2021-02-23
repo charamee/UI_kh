@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- get: 데이터가 보여지면서 전달된다. 
+		post: 데이터가 숨겨져서 전달된다.  -->
+	<form action="html08-form01-res.html" method="get">
+		<fieldset>
+		
+		<!-- ?id=jj&pw=jjj&radio=n&cb2=css&cb3=js&hd=my+hidden+value -->
+			<legend>회원가입</legend>
+			
+			<p>아이디: <input type="text" name = "id"/></p>
+			<p>비밀번호 : <input type ="password" name= "pw"></p>
+			<p>이메일 수신여부 <br>
+				<input type="radio" name ="radio" value="y">Yes<br> 
+				<input type="radio" name ="radio" value="n">No
+			<!-- radio button은 둘중 1개만 고를 수 있다 -->
+			</p>
+			<p>관심분야 <br>
+				<input type="checkbox" name ="cb1" value="html">HTML<br>
+				<input type="checkbox" name ="cb2" value="css">CSS<br>
+				<input type="checkbox" name ="cb3" value="js">JavaScript<br>
+				<input type="checkbox" name ="cb4" value="jq">JQuery<br> 
+			<!-- name이 각각 다르면 중복 선택가능 -->
+			
+			</p>
+			<p>
+				<input type="reset" value="취소">
+				<input type="button" value="그냥 버튼">
+				<input type="submit" value="전송">
+				
+			
+			</p>
+			<p>
+				<input type="file">
+				<input type="hidden" name="hd" value="my hidden value">
+			</p>
+		
+		
+		</fieldset>
+	
+	</form>
+
+</body>
+</html>

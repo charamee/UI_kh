@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="resources/js/jquery-3.5.1.min.js"></script>
+
+<script type="text/javascript">
+
+    $(function(){
+        $("div:eq(0)").css({"border" : "1px solid red", "width" : "400px","height" : "200px"}); //중괄호 한번에 다 잡을때는 : 으로 잡아준다 
+        $("#view").css("border","1px solid red").css("width","400px").css("height","100px")
+    })
+    //tag로 선택
+    function sel01(){
+        $("span").css("color","red");
+        $("#view").text(' $("span").css("color","red");');
+    }
+    //id로 선택
+    function sel02(params) {
+        jQuery("#t1").css("color","hotpink") //$ = jQeury 같은 표현이다 
+        $("#view").text(' $("#t1").css("color","hotpink");');
+    }
+    //class로 선택
+    function sel03(params) {
+        $(".t2").css("color","Royalblue");
+        $("#view").text('$(".t2").css("color","Royalblue");')
+    }
+
+    function sel04(params) {
+        $("li span").css("color","#9A2EFE"); //li 밑에 span 들어간 전부
+        $("#view").text('"$("li span").css("color","#9A2EFE");"')
+    }
+
+    function sel05(params) {
+        $("li>span").css("color","#04B4AE");//li 바로밑 span만 
+        $("#view").text('"$("li>span").css("color","#04B4AE");"')
+    }
+    function sel06(params) {
+       $("li:nth-child(6)").css("background-color","yellow") ; 
+       //n: n번째 (1부터) odd : 홀수 even : 짝수
+    }
+    function sel07(params) {
+        $("li:first-child").css("background-color","aquamarine");
+        $("#view").text('$("li:first-child").css("background-color","aquamarine");')
+    }
+    function sel08(params) {
+        $("li:last-child").css("background-color","black").css("color","white");
+        $("#view").text('$("li:last-child").css("background-color","black").css("color","white");')
+    }
+    function cls(params) {
+        $("li").css("background-color","").css("color","black");
+        $("span").css("color","black");
+        $("#view").text('');
+
+        //$("*").css("background-color","").css("color","black"); 해도 된다 
+    }
+
+
+
+</script>
+
+
+</head>
+<body>
+
+    <h1>selector 표현식</h1>
+
+    <div>
+        <ul>
+            <li><span>tag로 선택</span></li>
+            <li id="t1">id로선택</li>
+            <li class="t2">class로선택</li>
+            <li><span>parent child 선택</span></li>
+            <li><b><span>parent &gt; child</span></b>선택</li>
+            <li>:nth-child(n/odd/evn)로 선택</li>
+            <li>:first-child로 선택</li>
+            <li>:last-child로 선택</li>
+
+        </ul>
+            
+
+    </div>
+    <br>
+
+    <div>
+        <button onclick="sel01();">tag</button>
+        <button onclick="sel02();">id</button>
+        <button onclick="sel03();">class</button>
+        <button onclick="sel04();">p c</button>
+        <button onclick="sel05();">p &gt; c</button>
+        <button onclick="sel06();">nth</button>
+        <button onclick="sel07();">first</button>
+        <button onclick="sel08();">last</button>
+        <br>
+        <button onclick="cls();">clear</button>
+
+    </div>
+    <h2>코드</h2>
+    <div id="view"></div>
+</body>
+</html>
